@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-import Button from './Button';
+// import Column from './Column'
+import Table from './Table';
+// import TableMenu from './TableMenu'
+// import Button from './Button';
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-  
- <Button/>
-
+  {/* <Column></Column> */}
+ <Table></Table>
+{/* <TableMenu></TableMenu> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
