@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TableMenu from './TableMenu';
+// import TableMenu from './TableMenu';
 
 
 
@@ -82,23 +82,35 @@ export default class Table extends Component {
         </tr>
         </thead>
         <tbody>
-          <tr>
-          <td>
+         
                 {
-          this.state.table.map(({id,name,status,age,address,nickname,univ,job})=>{
-            return <TableMenu 
-            id={id}
-            name={name} 
-            status={status}
-             age={age} address={address} 
-            nick={nickname} univ={univ} job={job} 
-            />
-          }
-          )
+          // this.state.table.map(({id,name,status,age,address,nickname,univ,job})=>{
+          //   return <TableMenu 
+          //   id={id}
+          //   name={name} 
+          //   status={status}
+          //    age={age} address={address} 
+          //   nick={nickname} univ={univ} job={job} 
+          //   />
+          // }
+          // )
+
+                  this.state.table.map(value =>(
+             <tr>
+               <td>{value.id}</td>
+               <td>{value.name}</td>
+               <td>{value.status}</td>
+               <td>{value.age}</td>
+               <td>{value.address}</td>
+               <td>{value.nickname}</td>
+               <td>{value.univ}</td>
+               <td>{value.job}</td>
+
+             </tr>
+                  ))
 
       }   
-      </td>
-      </tr> 
+      
       </tbody>   
       </table>
 
