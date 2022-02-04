@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// import del from './icon/d.png'
+import { students } from './mock';
 // import TableMenu from './TableMenu';
 
 
@@ -7,97 +9,46 @@ export default class Table extends Component {
     constructor(props){
         super(props)
         this.state={
-             table:[
-                {
-                  id:1,
-                  name:'Sobir',
-                  status:'Student',
-                  age:32,
-                  address:'Daegu.South Korea',
-                  nickname:'Shelli',
-                  univ:'Kongju',
-                  job:'front-end developer',
+             table:  students,         
             
-                },
-                {
-                        id:2,
-                        name:'Sobir',
-                        status:'Student',
-                        age:32,
-                        address:'Daegu.South Korea',
-                        nickname:'Shelli',
-                        univ:'Kongju',
-                        job:'front-end developer',
-                
-                    },
-                    {
-                            id:3,
-                            name:'Shokhzoda',
-                            status:'Student',
-                            age:32,
-                            address:'Daegu.South Korea',
-                            nickname:'Shelli',
-                            univ:'Kongju',
-                            job:'front-end developer',
-                    
-                        }, {
-                            id:4,
-                            name:'Shokhzoda',
-                            status:'Student',
-                            age:32,
-                            address:'Daegu.South Korea',
-                            nickname:'Shelli',
-                            univ:'Kongju',
-                            job:'front-end developer',
-                    
-                        },
-                        {
-                            id:5,
-                            name:'Shokhzoda',
-                            status:'Student',
-                            age:32,
-                            address:'Daegu.South Korea',
-                            nickname:'Shelli',
-                            univ:'Kongju',
-                            job:'front-end developer',
-                    
-                        },
-            ] 
         }
     } 
   render(){ 
+
+
+
+
+const onDelete=(id)=>{
+  let res = this.state.table.filter((value)=> value.id !== id );
+  this.setState({table: res});
+
+}
+
+
         return (<div>
     <div className='data'>
       <table >
         <thead>
         <tr className='tr'>
-              <th className='ID'>ID</th>
-              <th className='Name'>Name</th>
-              <th className='Status'>Status</th>
-              <th className='Age'> Age</th>
-              <th className='Address'>Address</th>
-              <th className='Nickname'>Nickname</th>
-              <th className='Univ'>Univ</th>
-              <th className='Job'>Job</th>
+              <th >ID</th>
+              <th >Name</th>
+              <th >Status</th>
+              <th > Age</th>
+              <th >Address</th>
+              <th >Nickname</th>
+              <th >Univ</th>
+              <th >Job</th>
+              <th>Action</th>
         </tr>
         </thead>
         <tbody>
          
-                {
-          // this.state.table.map(({id,name,status,age,address,nickname,univ,job})=>{
-          //   return <TableMenu 
-          //   id={id}
-          //   name={name} 
-          //   status={status}
-          //    age={age} address={address} 
-          //   nick={nickname} univ={univ} job={job} 
-          //   />
-          // }
-          // )
-
-                  this.state.table.map(value =>(
-             <tr>
-               <td>{value.id}</td>
+         
+         
+         {
+               this.state.table.map(value =>(
+             <tr key={value.id}>
+               <th>{value.id}</th>
                <td>{value.name}</td>
                <td>{value.status}</td>
                <td>{value.age}</td>
@@ -105,6 +56,7 @@ export default class Table extends Component {
                <td>{value.nickname}</td>
                <td>{value.univ}</td>
                <td>{value.job}</td>
+               <button onClick={()=>onDelete(value.id)}>delete</button>
 
              </tr>
                   ))

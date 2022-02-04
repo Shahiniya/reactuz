@@ -1,20 +1,51 @@
 .data{
-   border-collapse:collapse;
-  background-color: turquoise;
-  margin:25px; 
+  background-color: #eee;
+  /* margin:25px;  */
+  width:50%;
+  height:300px;
+  overflow:scroll;
 
  
  }
 
-.tr{
-  background-color: tomato;
-  margin:0px 5px 5px 5px;
-  font-size: 15px;
-  text-align:left;
-  font-weight: bold;
-  padding:12px 15px;
+table{
+   border-collapse:collapse;
+   margin:0px ;
+  width: 800px;
+  border:2px solid #ddd;
+  font-size: 90%;
+   border-collapse:separate;
+   border:none;
+   border-spacing:0;
+   table-layout:fixed;
 }
 
-.ID{
-  margin:0px;
+table th{
+  padding:3px;
+  padding:1rem 1rem; 
+  text-align: left;
+  height:40px;
+  position:sticky;
+  top:0;
+  background-color: #eee;
 } 
+
+table td{
+  background-color: #eee;
+  text-align: left;
+  padding:1rem 1rem;
+  /* margin:15px; */
+}
+
+table thead th:first-child{
+  position:sticky;
+  left:0;
+  z-index:2;
+}
+
+table tbody th{
+  position:sticky;
+  left:0;
+  background:#eee;
+  z-index:1;
+}
