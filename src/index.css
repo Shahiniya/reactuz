@@ -1,8 +1,8 @@
 .data{
   background-color: #eee;
   /* margin:25px;  */
-  width:50%;
-  height:300px;
+  width:800px;
+  height:400px;
   overflow:scroll;
 
  
@@ -30,6 +30,7 @@ table th{
   background-color: #eee;
 } 
 
+
 table td{
   background-color: #eee;
   text-align: left;
@@ -48,4 +49,11 @@ table tbody th{
   left:0;
   background:#eee;
   z-index:1;
+}
+
+.update{
+  position:sticky;
+  top:0;
+  right:0;
+  z-index:3;
 }
