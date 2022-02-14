@@ -132,7 +132,7 @@ const onValueSelect=(e)=>{
               <td>
               {
                 this.state.selected.id === value.id ?(
-                <button onClick={onUpdate} >update</button>
+                <button onClick={onUpdate} >Edit</button>
              ):(
               <button onClick={()=>onSelect(value)}>edit</button>
              )}
