@@ -90,7 +90,7 @@ const onValueSelect=(e)=>{
               <th >Univ</th>
               <th >Job</th>
               <th className='action' >Action</th>
-              <th className='update' >Update</th>
+              <th className='update' >Edit</th>
 
         </tr>
         </thead>
@@ -132,10 +132,11 @@ const onValueSelect=(e)=>{
               <td>
               {
                 this.state.selected.id === value.id ?(
-                <button onClick={onUpdate} >Edit</button>
+                <button onClick={onUpdate} >save</button>
              ):(
               <button onClick={()=>onSelect(value)}>edit</button>
-             )}
+             )
+            }
                   </td>
                 
              </tr>
