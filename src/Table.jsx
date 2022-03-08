@@ -43,7 +43,7 @@ const onChange=(e)=>{
 const onSave=()=>{
   let newUser = {
     id:Date.now(),
-    name:this.state.name,
+    name:this.state.name, 
     status:this.state.status,
   }
   this.setState({
